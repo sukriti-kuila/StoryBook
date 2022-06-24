@@ -1,0 +1,41 @@
+<%- include("./partials/header.ejs") %>
+<%- include("./partials/nav.ejs") %>
+<%- include("./partials/addBtn.ejs") %>
+<div class="container">
+
+    <h3>Dashboard</h3>
+    <h5>Hi <%=name%> Welcome To Your Stories</h5>
+    <% 
+    if (stories)
+    {%>
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                    stories.forEach (story =>{%>
+                        <tr>
+                            <td><a href="/stories/<%=story._id%>"></a><%=story.title%></td>
+                            <td><%=story.createdAt%></td>
+                            <td><span class="dash-status"> <%=story.status%> </span></td>
+                            <td></td>
+                        </tr>
+                        <%}) 
+                    %>
+                </tbody>
+            </table>
+            <%}
+            else 
+            {%>
+                <p> There aren't any stories!</p>
+                <%}
+                %>
+</div>
+                <script>
+    M.Sidenav.init(document.querySelectorAll('.sidenav'));
+</script>

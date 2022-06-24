@@ -1,0 +1,22 @@
+<%- include("./partials/header.ejs") %>
+<%- include("./partials/nav.ejs") %>
+<div class="container login-container">
+    <div class="card">
+        <div class="card-content">
+            <h4><i class="fas fa-book-reader"> StoryBooks </i></h4>
+            <div class="section">
+                <p class="lead">Create public and private stories</p>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+            <a href="/auth/google" class="btn red darken-1">
+                <i class="fab fa-google"></i>
+                Sign in with Google
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+    M.Sidenav.init(document.querySelectorAll('.sidenav'));
+</script>
