@@ -22,7 +22,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false, // don't create a session untill something is stored
     store:  MongoStore.create({
-      mongoUrl: "mongodb+srv://sukriti:98Sj4B3fzXQxxEH@cluster0.utfp6.mongodb.net/storybooks?retryWrites=true&w=majority"
+      mongoUrl: dbURI
   })
   }))
 //!Passport middleware
